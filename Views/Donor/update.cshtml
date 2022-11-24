@@ -1,0 +1,28 @@
+﻿@using Internal_set_a.Models
+@model TBLDonor
+ 
+
+        @using (Html.BeginForm("updatedata", "Donor", FormMethod.Post))
+        {
+            <label>name</label>
+            @Html.TextBoxFor(a => a.Name);
+            <label>Donation Date</label>
+            @Html.TextBoxFor(a => a.Donation_Date, new { type = "Date", id = "bdate" });
+            <label>City</label>
+            @Html.TextBoxFor(a => a.City);
+            <label>Aadhar Number</label>
+            @Html.TextBoxFor(a => a.Aadhar_Number);
+            <label>Donation Amount</label>
+            @Html.TextBoxFor(a => a.Donation_Amount);
+            @Html.HiddenFor(a => a.ID_PK);
+            <input type="submit" value="submit" />
+        }
+    
+    <script>
+        var d=@Model.Donation_Date.ToString("dd");
+        var m= @Model.Donation_Date.ToString("MM");
+        var y = @Model.Donation_Date.ToString("yyyy");
+        var v = y + '-' + (((m.toString().length) == 1) ? ('0'+m) : m) + '-' + (((d.toString().length) == 1) ? ('0'+d) : d);
+        var d = document.querySelector("#bdate");
+        d.value = v;
+    </script>

@@ -1,0 +1,30 @@
+﻿@using Internal_set_a.Models
+@model List<TBLDonor>
+
+        <table border="1">
+            <tr>
+                <td>ID_PK</td>
+                <td>Name</td>
+                <td>Donation Date</td>
+                <td>City</td>
+                <td>Aadhar Number</td>
+                <td>Donation Amount</td>
+                <td></td>
+                <td></td>
+            </tr>
+            @foreach (TBLDonor tr in Model)
+            {
+                <tr>
+                    <td>@tr.ID_PK</td>
+                    <td>@tr.Name</td>
+                    <td>@tr.Donation_Date</td>
+                    <td>@tr.City</td>
+                    <td>@tr.Aadhar_Number</td>
+                    <td>@tr.Donation_Amount</td>
+                    <td>@Html.ActionLink("Update", "update", "Donor", new { id = tr.ID_PK }, null)</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "Donor", new { id = tr.ID_PK }, null)</td>
+
+                </tr>
+            }
+        </table>
+   

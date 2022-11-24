@@ -1,0 +1,30 @@
+﻿body {
+    margin 0;
+}
+
+.myheader {
+    width: 100%;
+    height: max-content;
+    background-color: cornflowerblue;
+    padding-top: 20px;
+}
+
+    .myheader h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+.menulink {
+    padding-top: 20px;
+    height: 50px;
+    width: max-content;
+    margin: 0px auto;
+}
+
+    .menulink a {
+        vertical-align: central;
+    }
+
+.maincontainer {
+    margin: 50px auto 0 auto;
+}

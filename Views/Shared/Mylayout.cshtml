@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="myheader">
+        <h1>Internal Practical Examination</h1>
+        <div class="menulink">
+            @Html.ActionLink("go to insert", "Index", "Donor", null, null)
+            @Html.ActionLink("list", "GetAll", "Donor", null, null)
+        </div>
+    </div>
+    <div class="maincontainer">
+        @RenderBody()
+    </div>
+</body>
+</html>
